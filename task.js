@@ -8,7 +8,8 @@
 // Task One
 let personalInfo = {
     firsrName: "Matthew",
-    surName: "Kuru"
+    surName: "Kuru",
+    age: 22
 }
 
 let contactInfo = {
@@ -29,22 +30,25 @@ const shopProduct = {
 }
 
 //logging both keys and values 
-console.log(shopProduct)
+//console.log(shopProduct)
 
 //logging only the keys
 const keys = Object.keys(shopProduct)
-console.log(keys)
+//console.log(keys)
 
 
 //logging only the values
 const values = Object.values(shopProduct)
-console.log(values)
+//console.log(values)
 
-function productChecker(product) {
-    if (shopProduct.includes(product)){
-        console.log(`Product is in ${shopProduct.foodStuffs}`)
-    }
+//checking if Garri is in a key
+
+// Printing each product on a line
+keys.forEach((key, i) => {
+    console.log(`${keys[i]}: ${values[i]}`)
 }
+)
+
 
 // Task Three
 const settings = {
@@ -55,10 +59,11 @@ const settings = {
 Object.freeze(settings)
 settings.theme = "light"
 
-if (Object.isFrozen(settings) == true) {
-    console.log("Immutable settings!")
-} else {
-    console.log("Mutable")
-}
+// if (Object.isFrozen(settings) == true) {
+//     console.log("Immutable settings!")
+// } else {
+//     console.log("Mutable")
+// }
 
-console.log(settings)
+//console.log(settings)
+
